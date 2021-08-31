@@ -7,6 +7,7 @@ import greenfoot.*;
  */
 public class Crab extends Actor
 {
+    private int numOfWorms = 8;
     // This method repeats the following actions
     public void act()
     {
@@ -49,6 +50,15 @@ public class Crab extends Actor
         {
             removeTouching(Worm.class);
             Greenfoot.playSound("slurp.wav");
+            numOfWorms--;
+            // *** Winning the game *******************
+            if(numOfWorms == 0)
+            {
+                Greenfoot.setWorld(new WinSplash());
+               Greenfoot.playSound("fanfare.wav");
+                Greenfoot.stop();
+            }
+            // *****************************************
         }
         
         if(isTouching(Lobster.class))
@@ -56,6 +66,7 @@ public class Crab extends Actor
             Greenfoot.playSound("au.wav");
             Greenfoot.stop();
         }
+    
     }
 }
 
