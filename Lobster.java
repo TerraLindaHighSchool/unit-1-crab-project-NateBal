@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Lobster here.
+ * The lobester class wanders until it hits the crab and ends the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Nathaniel Baluda
+ * 9/8/2021
  */
 public class Lobster extends Actor
 {

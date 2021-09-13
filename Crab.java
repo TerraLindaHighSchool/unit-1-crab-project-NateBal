@@ -28,22 +28,22 @@ public class Crab extends Actor
     // Checks for user key presses so user can turn the Crab
     private void checkKeyPress()
     {
-        if(Greenfoot.isKeyDown("right"))
+        if(Greenfoot.isKeyDown("d"))
         {
             setLocation(getX() + 3 ,getY());
         }
         
-        if(Greenfoot.isKeyDown("left"))
+        if(Greenfoot.isKeyDown("a"))
         {
             setLocation(getX() - 3 ,getY());
         }
         
-        if(Greenfoot.isKeyDown("up"))
+        if(Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(),getY() - 3);
         }
         
-        if(Greenfoot.isKeyDown("down"))
+        if(Greenfoot.isKeyDown("s"))
         {
             setLocation(getX(),getY() + 3);
         }
@@ -65,10 +65,11 @@ public class Crab extends Actor
             }
             // *****************************************
         }
-        
+        // Losing the game
         if(isTouching(Lobster.class))
         {
             Greenfoot.playSound("au.wav");
+            Greenfoot.setWorld(new loseScreen());
             Greenfoot.stop();
         }
     
