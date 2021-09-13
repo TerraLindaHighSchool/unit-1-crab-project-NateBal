@@ -8,11 +8,45 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Lobster extends Actor
 {
-       // This method repeats the following actions
+        //Moves towards Crab
+    private Crab player;
+    
+    public Lobster(Crab crab)
+    {
+        player = crab;
+    }
+    
+    // This method repeats the following actions
     public void act()
     {
-        move(3);
+        switch(getWorld().getObjects(Worm.class).size())
+        {
+            case 1: 
+                move(5);
+                break;
+            case 2:
+                move (4);
+                break;
+            case 3:
+                move (4);
+                break;
+            case 4:
+                move (3);
+                break;
+            case 5:
+                move (3);
+                break;
+            case 6:
+                move (2);
+                break;
+            case 7:
+                move(1);
+                break;
+            default:
+                move(0);
+        }
         turnAtEdge();
+        turnTowards(player.getX(), player.getY());
     }
     
     // Turns the Crab at the edge
