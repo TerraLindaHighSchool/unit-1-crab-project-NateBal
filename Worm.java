@@ -8,36 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Worm extends Actor
 {
-    private int numOfWorms = 8;
+    private int numOfWorms;
     // Lets the worms move
     public void act()
     {
-        switch(getWorld().getObjects(Worm.class).size())
-        {
-            case 1: 
-                move(12);
-                break;
-            case 2:
-                move (11);
-                break;
-            case 3:
-                move (10);
-                break;
-            case 4:
-                move (9);
-                break;
-            case 5:
-                move (8);
-                break;
-            case 6:
-                move (7);
-                break;
-            case 7:
-                move(6);
-                break;
-            default:
-                move(5);
-        }
+        numOfWorms = getWorld().getObjects(Worm.class).size();
+        move(12 - numOfWorms);
         turnAtEdge();
     }
     
@@ -46,7 +22,7 @@ public class Worm extends Actor
     {
         if(isAtEdge())
         {
-            turn(70);
+            turn(Greenfoot.getRandomNumber(160) + 20);
         }
     }
     
