@@ -11,9 +11,9 @@ public class Lobster extends Actor
         //Moves towards Crab
     private Crab player;
     
-    public Lobster(Crab crab)
+    public Lobster(Crab rocketship)
     {
-        player = crab;
+        player = rocketship;
     }
     
     // This method repeats the following actions
