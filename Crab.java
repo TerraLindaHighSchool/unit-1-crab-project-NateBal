@@ -31,41 +31,49 @@ public class Crab extends Actor
         if(Greenfoot.isKeyDown("d"))
         {
             setLocation(getX() + 4 ,getY());
+            turn(5);
         }
         
         if(Greenfoot.isKeyDown("a"))
         {
             setLocation(getX() - 4 ,getY());
+            turn(-5);
         }
         
         if(Greenfoot.isKeyDown("w"))
         {
             setLocation(getX(),getY() - 4);
+            turn(5);
         }
         
         if(Greenfoot.isKeyDown("s"))
         {
             setLocation(getX(),getY() + 4);
+            turn(-5);
         }
         
         if(Greenfoot.isKeyDown("right"))
         {
             setLocation(getX() + 4 ,getY());
+            turn(5);
         }
         
         if(Greenfoot.isKeyDown("left"))
         {
             setLocation(getX() - 4 ,getY());
+            turn(-5);
         }
         
         if(Greenfoot.isKeyDown("up"))
         {
             setLocation(getX(),getY() - 4);
+            turn(5);
         }
         
         if(Greenfoot.isKeyDown("down"))
         {
             setLocation(getX(),getY() + 4);
+            turn(-5);
         }
     }
     // Checks for collisions with other objects

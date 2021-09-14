@@ -1,9 +1,9 @@
 #Greenfoot project file
-class.Crab.image=crab.png
-class.CrabWorld.image=sand.jpg
-class.Lobster.image=lobster.png
+class.Crab.image=rocket.png
+class.CrabWorld.image=space.jpg
+class.Lobster.image=gold-ball.png
 class.WinSplash.image=youWon.png
-class.Worm.image=worm.png
+class.Worm.image=yellow-draught.png
 class.loseScreen.image=smiley3.png
 dependency1.from=CrabWorld
 dependency1.to=Crab
